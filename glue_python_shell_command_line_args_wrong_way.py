@@ -1,14 +1,12 @@
 import sys
 
+print(sys.argv)
 # Access command-line arguments
-if len(sys.argv) != 3:
+if len(sys.argv) < 3:
     print("Usage: python script.py <arg1> <arg2>")
     sys.exit(1)
 
-print(sys.argv)
-print(type(sys.argv))
-# arg1 = sys.argv[1]
-# arg2 = sys.argv[2]
-
-# print(f"Argument 1: {arg1}")
-# print(f"Argument 2: {arg2}")
+c=0
+for args in sys.argv:
+    print(f" {c} : {args}")
+    c=c+1
