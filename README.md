@@ -10,7 +10,7 @@ https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs
 
 ### Run the container
 
-`docker run -it -v "%USERPROFILE%\.aws:/home/glue_user/.aws" -e AWS_PROFILE=default -e DISABLE_SSL=true --rm -p 4040:4040 -p 18080:18080 -p 8888:8888 --name glue_pyspark amazon/aws-glue-libs:glue_libs_3.0.0_image_01`
+`docker run -it -v "%USERPROFILE%\.aws:/home/glue_user/.aws" -e AWS_PROFILE=default -e DISABLE_SSL=true --rm -p 4040:4040 -p 18080:18080 -p 8888:8888 --name glue_pyspark amazon/aws-glue-libs:glue_libs_4.0.0_image_01`
 
 #### Explanation of Each Option
 
@@ -74,5 +74,6 @@ sc = SparkContext.getOrCreate() #get or create, important for jupyter.
 glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 df=spark.read.csv("<**sample file from your s3 account**>")
+df = spark.read.csv(" <sample file from your s3 account >", header=True)
 df.show()
 
