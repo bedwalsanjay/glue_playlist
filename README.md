@@ -1,7 +1,7 @@
 # glue_playlist
 This repository contains the code which I am going to use in my youtube playlist
 
-## Run AWS Glue code from local docker container 
+## Run AWS Glue code from local docker container in Windows machine
 Read this article for your reference :
 https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs-locally-using-a-docker-container/
 
@@ -22,9 +22,9 @@ https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs
 | `-e AWS_PROFILE=default`    | Sets an environment variable inside the container to use the default AWS profile.                                                                                                                                            |
 | `-e DISABLE_SSL=true`       | Disables SSL verification (useful in certain corporate networks or debugging scenarios). **Use with caution in production.** |
 | `--rm`                      | Automatically removes the container when it stops (prevents clutter).                                                                                                                                                        |
-| `-p 4040:4040`              | Maps Spark UI (port 4040) from the container to your host machine. This allows you to view the Spark UI in your browser at `http://localhost:4040`.                                                                           |
-| `-p 18080:18080`            | Maps Spark History Server (port 18080) for monitoring past jobs. This allows you to view the Spark History Server in your browser at `http://localhost:18080`.                                                                |
-| `-p 8888:8888`              | Maps Jupyter Notebook (port 8888) for coding in a browser. This allows you to access Jupyter Notebook in your browser at `http://localhost:8888`.                                                                              |
+| `-p 4040:4040`              | Maps Spark UI (port 4040) from the container to your host machine. This allows you to view the Spark UI in your browser at http://localhost:4040                                                                        |
+| `-p 18080:18080`            | Maps Spark History Server (port 18080) for monitoring past jobs. This allows you to view the Spark History Server in your browser at http://localhost:18080                                                             |
+| `-p 8888:8888`              | Maps Jupyter Notebook (port 8888) for coding in a browser. This allows you to access Jupyter Notebook in your browser at http://localhost:8888                                                                            |
 | `--name glue_pyspark`       | Names the container `glue_pyspark` for easier reference. This allows you to refer to the container by name instead of its ID.                                                                                                |
 | `amazon/aws-glue-libs:glue_libs_3.0.0_image_01` | Specifies the Docker image to use (AWS Glue 3.0 libraries). This image provides the necessary libraries and dependencies for running AWS Glue PySpark jobs locally. Replace `3.0.0_image_01` with your desired glue version. |
 
