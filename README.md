@@ -22,3 +22,6 @@ https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs
 ### Run jupyter notebook
 Then open http://localhost:8888/ in your browser
 
+
+![image](https://github.com/user-attachments/assets/4c565212-1917-43ae-b00b-944527b986d3)
+
