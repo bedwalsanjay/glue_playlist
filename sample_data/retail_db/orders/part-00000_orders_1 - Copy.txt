@@ -1,0 +1,2 @@
+order_id,order_date,order_customer_id,order_status
+1,2013-07-25 00:00:00.0,11599,CLOSED

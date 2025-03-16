@@ -1,0 +1,11 @@
+import pandas as pd
+df = pd.read_csv("s3://youtube-demo-20230813/original_files/part-00000_orders_1.csv")
+print(df)
+#droping duplicate columns
+df.drop_duplicates(inplace = True) 
+
+
+import awswrangler as wr
+
+df = wr.s3.read_csv("s3://youtube-demo-20230813/source_file/part-00000_orders.csv")
+print(df)
