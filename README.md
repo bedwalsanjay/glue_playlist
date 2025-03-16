@@ -26,7 +26,7 @@ https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs
 | `-p 18080:18080`            | Maps Spark History Server (port 18080) for monitoring past jobs. This allows you to view the Spark History Server in your browser at http://localhost:18080                                                             |
 | `-p 8888:8888`              | Maps Jupyter Notebook (port 8888) for coding in a browser. This allows you to access Jupyter Notebook in your browser at http://localhost:8888                                                                            |
 | `--name glue_pyspark`       | Names the container `glue_pyspark` for easier reference. This allows you to refer to the container by name instead of its ID.                                                                                                |
-| `amazon/aws-glue-libs:glue_libs_3.0.0_image_01` | Specifies the Docker image to use (AWS Glue 3.0 libraries). This image provides the necessary libraries and dependencies for running AWS Glue PySpark jobs locally. Replace `3.0.0_image_01` with your desired glue version. |
+| `amazon/aws-glue-libs:glue_libs_4.0.0_image_01` | Specifies the Docker image to use (AWS Glue 4.0 libraries). This image provides the necessary libraries and dependencies for running AWS Glue PySpark jobs locally. Replace `4.0.0_image_01` with your desired glue version. |
 
 
 #### What Happens When You Run This Command?
