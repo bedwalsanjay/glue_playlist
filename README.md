@@ -10,6 +10,33 @@ https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs
 
 ### Run the container
 
+replace C:\Users\Sanjay Bedwal\Desktop\repos\youtube\glue_playlist with your local path . 
+
+  docker run -it ^
+
+  -v "%USERPROFILE%\.aws:/home/glue_user/.aws" ^
+  
+  -v "**C:\Users\Sanjay Bedwal\Desktop\repos\youtube\glue_playlist**:/home/glue_user/workspace" ^
+  
+  -e AWS_PROFILE=default ^
+  
+  -e DISABLE_SSL=true ^
+  
+  --rm ^
+  
+  -p 4040:4040 ^
+  
+  -p 18080:18080 ^
+  
+  -p 8888:8888 ^
+  
+  --name glue_pyspark ^
+  
+  amazon/aws-glue-libs:glue_libs_4.0.0_image_01
+
+
+OR if you dont want to bind your local folder in your docker container and then you can run below command 
+
 `docker run -it -v "%USERPROFILE%\.aws:/home/glue_user/.aws" -e AWS_PROFILE=default -e DISABLE_SSL=true --rm -p 4040:4040 -p 18080:18080 -p 8888:8888 --name glue_pyspark amazon/aws-glue-libs:glue_libs_4.0.0_image_01`
 
 #### Explanation of Each Option
