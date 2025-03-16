@@ -57,7 +57,7 @@ OR if you dont want to bind your local folder in your docker container and then 
 
 
 #### What Happens When You Run This Command?
-1. A new Docker container starts using the AWS Glue 3.0 image.
+1. A new Docker container starts using the AWS Glue 4.0 image.
 2. The container gets access to your local AWS credentials (~/.aws/ folder).
 3. Spark UI (4040), Spark History Server (18080), and Jupyter Notebook (8888) are exposed to your machine.
 4. SSL is disabled for AWS connections inside the container.
