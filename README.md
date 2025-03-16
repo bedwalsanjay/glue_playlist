@@ -6,7 +6,7 @@ Read this article for your reference :
 https://aws.amazon.com/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs-locally-using-a-docker-container/
 
 ### Download the aws glue image
-`docker pull amazon/aws-glue-libs:glue_libs_3.0.0_image_01`
+`docker pull amazon/aws-glue-libs:glue_libs_4.0.0_image_01`
 
 ### Run the container
 
