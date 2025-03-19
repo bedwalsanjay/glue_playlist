@@ -63,6 +63,10 @@ OR if you dont want to bind your local folder in your docker container and then 
 
 `jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=''`
 
+You will see a screen like below 
+
+![image](https://github.com/user-attachments/assets/4c565212-1917-43ae-b00b-944527b986d3)
+
 ### Run jupyter notebook
 Then open http://localhost:8888/ in your browser
 
@@ -73,8 +77,6 @@ Since --rm removes the container after stopping, just press:
 or in a new terminal:
 `docker stop glue_pyspark`
 
-
-![image](https://github.com/user-attachments/assets/4c565212-1917-43ae-b00b-944527b986d3)
 
 ### Run some sample code to test everything
 
