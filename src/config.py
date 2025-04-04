@@ -1,0 +1,3 @@
+ACCOUNT_ID=526844078262
+REGION="ap-south-1"
+GLUE_SECURITY_CONFIG = "glue-security-config"
