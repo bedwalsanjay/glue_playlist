@@ -20,22 +20,23 @@ job.init(args['JOB_NAME'], args)
 source_path = "s3://edp-source/source_files/"
 target_path = "s3://edp-target/target/orders/"
 
+# Define the schema
+schema = StructType([
+    StructField("order_id", IntegerType(), True),
+    StructField("order_date", TimestampType(), True),
+    StructField("order_customer_id", IntegerType(), True),
+    StructField("order_status", StringType(), True)
+])
+
 # Read the data from the source path
 source_GDF = glueContext.create_dynamic_frame.from_options(
     connection_type="s3",
     connection_options={"paths": [source_path]},
     format="csv",
     format_options={"withHeader": True},
-    transformation_ctx="source_GDF"
+    transformation_ctx="source_GDF",
+    schema=schema
 )
-
-# # Define the schema
-# schema = StructType([
-#     StructField("order_id", IntegerType(), True),
-#     StructField("order_date", TimestampType(), True),
-#     StructField("order_customer_id", IntegerType(), True),
-#     StructField("order_status", StringType(), True)
-# ])
 
 # # Convert DynamicFrame to DataFrame
 # df = source_GDF.toDF()
